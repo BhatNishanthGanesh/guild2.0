@@ -74,7 +74,7 @@
 //                             handleFontSelection('SELECT_FONT_MONOSPACE')
 //                         }
 //                     >
-//                         MonoSpace
+//                          MonoSpace
 //                     </p>
 //                 </div>
 //             )}

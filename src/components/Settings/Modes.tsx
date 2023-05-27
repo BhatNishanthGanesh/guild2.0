@@ -29,8 +29,8 @@ export default function Modes({ theme, onClick }: ModesProps) {
                     ) : (
                         <MoonIcon
                             className='
-                                h-8 w-8 
-                                text-black-400'
+                                 h-8 w-8 
+                                 text-black-400'
                         />
                     )}
                 </div>

@@ -154,7 +154,8 @@ function Setting() {
                        border-t-2 
                        md:border-t-4 
                        border-black 
-                       dark:border-white'
+                       dark:border-white
+                       '
                     ></div>
                 </div>
             </div>
