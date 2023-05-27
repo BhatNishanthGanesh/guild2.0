@@ -185,25 +185,61 @@ export default function Navbar() {
                 items-center
                 '
             >
-                <MenuIcon className='icon' />
+                <MenuIcon
+                    className='
+                icon
+                '
+                />
             </div>
             {currentUser ? (
-                <p className='text-gray-500 font-semibold truncate max-w-[5rem] flex items-center space-x-2 justify-end'>
+                <p
+                    className='
+                    text-gray-500 
+                    font-semibold 
+                    truncate 
+                    max-w-[5rem] 
+                    flex 
+                    items-center 
+                    space-x-2 
+                    justify-end
+                    '
+                >
                     <Avatar seed={currentUser?.id} />
                     <ChevronDownIcon
-                        className='h-6 w-6 cursor-pointer'
+                        className='h-6 
+                        w-6 
+                        cursor-pointer
+                        '
                         onClick={() =>
                             setIsProfileDropdownOpen(!isProfileDropdownOpen)
                         }
                     />
                     {isProfileDropdownOpen && (
-                        <div className='absolute right-0 mt-8 w-[12rem]'>
+                        <div
+                            className='
+                        absolute 
+                        right-0 
+                        mt-8 
+                        w-[12rem]
+                        '
+                        >
                             <Dropdown setIsOpen={setIsProfileDropdownOpen}>
                                 <Link
                                     href={`/users/${currentUser?.username}`}
-                                    className='flex items-center space-x-2'
+                                    className='
+                                    flex 
+                                    items-center 
+                                    space-x-2'
                                 >
-                                    <div className='relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600'>
+                                    <div
+                                        className='
+                                             relative 
+                                             w-10 h-10 
+                                             overflow-hidden 
+                                             bg-gray-100 
+                                             rounded-full 
+                                             dark:bg-gray-600'
+                                    >
                                         <UserCircleIcon
                                             className='absolute w-12 h-12 text-gray-400 -left-1'
                                             fill='currentColor'
@@ -215,14 +251,28 @@ export default function Navbar() {
 
                                 <Link
                                     href='/settings'
-                                    className='mt-4 mb-4 flex items-center space-x-2'
+                                    className='
+                                        mt-4 
+                                        mb-4 
+                                        flex 
+                                        items-center 
+                                        space-x-2
+                                        '
                                 >
                                     <CogIcon
-                                        className='w-6 h-6 cursor-pointer'
+                                        className='
+                                        w-6 h-6 
+                                        cursor-pointer'
                                         stroke='white'
                                         strokeWidth={1.5}
                                     />
-                                    <div className='flex'>Settings</div>
+                                    <div
+                                        className='
+                                    flex
+                                    '
+                                    >
+                                        Settings
+                                    </div>
                                 </Link>
                                 <Button
                                     title='Sign Out'
@@ -236,11 +286,35 @@ export default function Navbar() {
                 </p>
             ) : (
                 <div
-                    className='hidden lg:flex items-center space-x-2 justify-end border border-gray-200 p-2 cursor-pointer'
+                    className='
+                                hidden 
+                                lg:flex 
+                                items-center 
+                                space-x-2 
+                                justify-end 
+                                border 
+                                border-gray-200 
+                                p-2 
+                                cursor-pointer'
                     onClick={() => loginModal.onOpen()}
                 >
-                    <ArrowCircleDownIcon className='rounded-full cursor-pointer transition duration-150 transform hover:scale-110 h-6 w-6' />
-                    <p className='text-gray-500 font-semibold'>Sign in</p>
+                    <ArrowCircleDownIcon
+                        className='
+                                                    rounded-full 
+                                                    cursor-pointer 
+                                                    transition 
+                                                    duration-150 
+                                                    transform hover:scale-110 
+                                                    h-6 w-6'
+                    />
+                    <p
+                        className='
+                               text-gray-500 
+                               font-semibold
+                               '
+                    >
+                        Sign in
+                    </p>
                 </div>
             )}
         </div>
