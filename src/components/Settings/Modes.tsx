@@ -23,7 +23,7 @@ export default function Modes({ theme, onClick }: ModesProps) {
                     {theme === 'dark' ? (
                         <SunIcon
                             className='
-                               h-8 w-8 
+                               h-8 w-8
                                text-yellow-400'
                         />
                     ) : (

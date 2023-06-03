@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { CogIcon } from '@heroicons/react/solid';
-// import SelectFonts from './SelectFonts';
+import SelectFonts from '../SelectFonts';
+import { FontProvider } from '../../contexts/FontContext';
 import Modes from './Modes';
 
 function HomePage() {
@@ -21,6 +22,7 @@ function ThirdPage() {
 
 function Setting() {
     const [activePage, setActivePage] = useState('home');
+    // const [font] = useContext(FontContext);
     const [mode, setMode] = useState(() => {
         if (typeof window !== 'undefined') {
             return localStorage.getItem('mode') || 'light';
@@ -159,15 +161,16 @@ function Setting() {
                     ></div>
                 </div>
             </div>
-            {/* <SelectFonts /> */}
-
-            {/* <span className='text-gray-400 lg:mx-4'>|</span> */}
-            <Modes
-                theme={mode}
-                onClick={() => {
-                    setMode(mode === 'dark' ? 'light' : 'dark');
-                }}
-            ></Modes>
+            <FontProvider>
+                <SelectFonts />
+                <span className='text-gray-400 lg:mx-4 h-10 w-10 pt-8'>|</span>
+                <Modes
+                    theme={mode}
+                    onClick={() => {
+                        setMode(mode === 'dark' ? 'light' : 'dark');
+                    }}
+                ></Modes>
+            </FontProvider>
             <div
                 className='
                 p-7 
