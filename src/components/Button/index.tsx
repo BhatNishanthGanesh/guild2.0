@@ -53,6 +53,7 @@ export default function Index({
             className={`
                   disabled:opacity-70 disabled:cursor-not-allowed
                   transition duration-200 ease-in-out
+                  
                 flex-1
                 font-bold
                 rounded-md

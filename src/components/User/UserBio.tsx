@@ -10,7 +10,10 @@ export default function UserBio() {
 
     const editModal = useEditModal();
     return (
-        <div className=''>
+        <div
+            className='dark:bg-dark-body 
+        dark:text-white'
+        >
             <div
                 className='
             flex 
@@ -18,6 +21,8 @@ export default function UserBio() {
              p-4
              mt-10
              relative
+             
+             
              '
             >
                 {currentUser?.id === user?.id ? (
@@ -43,6 +48,7 @@ export default function UserBio() {
                 className='
             px-4
             -mt-7
+            
             '
             >
                 <div
@@ -55,14 +61,15 @@ export default function UserBio() {
                         className='
                     text-2xl
                     font-bold
-                     text-black
+                    dark:text-white
                      '
                     >
                         {user?.name}
                     </p>
                     <p
                         className='
-                    text-gray-700
+                        
+                    dark:text-white
                      font-thin
                      '
                     >
@@ -125,6 +132,7 @@ export default function UserBio() {
                               items-center
                                space-x-4
                                mt-2
+                               
                                '
                             >
                                 <p
@@ -157,6 +165,7 @@ export default function UserBio() {
                     bg-gray-200
                     block
                     mt-4
+                    
                     '
                 ></span>
             </div>

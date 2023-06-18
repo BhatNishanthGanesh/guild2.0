@@ -62,7 +62,7 @@ const EditModal = () => {
     ]);
 
     const bodyContent = (
-        <div className='flex flex-col space-y-4'>
+        <div className='flex flex-col space-y-4 '>
             <div className='flex flex-col space-y-2'>
                 <ImageUpload
                     label='Profile image'

@@ -89,6 +89,7 @@ export default function Navbar() {
                     className='
                         h-6 w-6
                         cursor-pointer
+                        dark:text-black
                     '
                 />
                 <p
@@ -96,6 +97,7 @@ export default function Navbar() {
                     hidden md:inline-flex
                     ml-2
                     flex-1
+                    dark:text-black
                 '
                 >
                     Home
@@ -104,13 +106,14 @@ export default function Navbar() {
                     className='
                         h-6 w-6
                         cursor-pointer
+                        dark:text-black
                     '
                     onClick={() => setIsOpen(!isOpen)}
                 />
                 {isOpen && (
                     <div>
                         <Dropdown setIsOpen={setIsOpen}>
-                            <ul>
+                            <ul className='dark:text-black'>
                                 <li>Hello</li>
                             </ul>
                         </Dropdown>
@@ -128,6 +131,7 @@ export default function Navbar() {
             px-3 py-1
             lg:border lg:border-gray-200
             lg:bg-gray-100
+            
             '
             >
                 <SearchIcon
@@ -156,6 +160,7 @@ export default function Navbar() {
                 items-center
                 hidden lg:inline-flex
                 space-x-2
+                dark:text-black
             '
             >
                 <SparklesIcon className='icon' />
@@ -169,6 +174,7 @@ export default function Navbar() {
                     bg-gray-100
                     rounded-lg
                     px-2 py-1
+                    dark:text-black
                 '
                 >
                     <SpeakerphoneIcon className='icon' />

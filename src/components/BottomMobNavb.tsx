@@ -16,6 +16,7 @@ export default function BottomMobNavb() {
             fixed
             bottom-0
             left-0
+           
         '
         >
             <div
@@ -31,6 +32,7 @@ export default function BottomMobNavb() {
                 w-screen
                 border border-gray-200
                 gap-5
+                
             '
             >
                 <HomeIcon className='icon' />

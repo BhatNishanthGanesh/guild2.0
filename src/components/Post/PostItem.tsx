@@ -21,6 +21,9 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
         <div
             className='
             bg-white
+            text-black
+            dark:bg-dark-body 
+            dark:text-white
             mx-0
         '
         >
@@ -29,8 +32,8 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
                     className='
            
         
-             border-b-[1px] 
-        border-neutral-800 
+             border-b-[2px] 
+        dark:border-white 
         p-5 
         cursor-pointer 
         transition
@@ -56,6 +59,7 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
                     text-gray-700
                     font-semibold
                     text-sm
+                    dark:text-white
                     ml-2
                     mt-0.5
                     '
@@ -65,13 +69,14 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
                         <p
                             className='
                     text-gray-700
+                    dark:text-white
                     ml-2
                     '
                         >
                             @{data?.user?.username}
                         </p>
                         <div className='ml-auto'>
-                            <span className='text-neutral-500 text-sm'>
+                            <span className='text-neutral-500 text-sm dark:text-white'>
                                 {new Date(data?.createdAt).toLocaleDateString()}
                             </span>
                         </div>
@@ -81,6 +86,7 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
                             <p
                                 className='
                     text-gray-700
+                    dark:text-white
                     '
                             >
                                 {data?.body}
@@ -91,6 +97,7 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
                     <div className='flex flex-row items-center mt-3 gap-10'>
                         <div
                             className='
+                dark:text-white
                 flex 
                 flex-row 
                 items-center 
@@ -106,6 +113,7 @@ export default function PostItem({ userId, data = {} }: PostItemProps): any {
                         </div>
                         <div
                             className='
+                dark:text-white
                 flex 
                 flex-row 
                 items-center 

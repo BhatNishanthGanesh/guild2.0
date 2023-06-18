@@ -12,6 +12,7 @@ export default function Index() {
             <main
                 className='
             lg:pl-20 h-full
+            
           '
             >
                 <ul>

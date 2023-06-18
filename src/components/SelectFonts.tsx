@@ -32,10 +32,8 @@ const SelectFonts: React.FC = () => {
         };
     }, [handleClickOutside]);
 
-    const handleFontSelection = (selectedFont: string) => {
-        const action: FontAction = {
-            type: selectedFont,
-        };
+    const handleFontSelection = (selectedFont: FontAction['type']) => {
+        const action: FontAction = { type: selectedFont };
         dispatch(action);
         setOpen(false);
     };
@@ -43,7 +41,7 @@ const SelectFonts: React.FC = () => {
     return (
         <div className='relative' ref={selectRef}>
             <div
-                className='flex cursor-pointer flex-row  items-center gap-3 dark:text-white'
+                className='flex cursor-pointer flex-row items-center gap-3 dark:text-white'
                 onClick={() => setOpen(!open)}
             >
                 <h2 className='font-bold p-8'>{font.font}</h2>

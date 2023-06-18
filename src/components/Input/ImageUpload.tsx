@@ -51,12 +51,15 @@ const ImageUpload: React.FC<DropzoneProps> = ({
         <div
             {...getRootProps({
                 className:
-                    'w-full p-4 text-white text-center border-2 border-dotted rounded-md border-neutral-700',
+                    'w-full p-4 text-white text-center border-2 border-dotted rounded-md border-neutral-700 dark:bg-dark-body   dark:text-white ',
             })}
         >
             <input {...getInputProps()} />
             {base64 ? (
-                <div className='flex items-center justify-center'>
+                <div
+                    className='flex items-center justify-center   dark:bg-dark-body 
+                dark:text-white'
+                >
                     <Image
                         src={base64}
                         height='100'

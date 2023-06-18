@@ -10,9 +10,11 @@ import { SessionProvider } from 'next-auth/react';
 import useCurrentUser from '@/hooks/useCurrentUser';
 import Layout from '@/layout/Layout';
 import EditModal from '@/components/Modals/EditModal';
+import '../styles/index.css';
 
 export default function App({ Component, pageProps, router }: AppProps) {
     const { data: currentUser } = useCurrentUser();
+
     return (
         <>
             <SessionProvider session={pageProps.session}>
@@ -26,7 +28,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
                         <EditModal />
                     </>
                 )}
-
                 <Navbar />
                 <Layout pathname={router.pathname}>
                     <Component {...pageProps} />
@@ -34,8 +35,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
                 <div
                     className='
                     sm:hidden
-                     block
-                 '
+                    block
+                    
+                    '
                 >
                     <BottomMobNavb />
                 </div>

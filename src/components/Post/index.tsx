@@ -73,6 +73,7 @@ export default function Index({ postId, isComment = false }: PostProps): any {
                         shadow-md
                         border-gray-300
                         mx-2
+                        
                         '
                 >
                     <p className='font-semibold text-gray-500'>
@@ -106,17 +107,22 @@ export default function Index({ postId, isComment = false }: PostProps): any {
             ) : (
                 <form
                     className='
+                    dark:bg-dark-body 
+                    dark:text-white
                     rounded-md
                     bg-white
                     shadow-md
                     border-gray-300
                     p-2
                     mx-7
+                    
+                    
                     '
                     onSubmit={onSubmit}
                 >
                     <div
                         className='
+                        
                     flex
                     items-center
                     space-x-4
@@ -125,6 +131,7 @@ export default function Index({ postId, isComment = false }: PostProps): any {
                     >
                         <div
                             className='
+                            
                         
                     '
                         >
@@ -135,9 +142,12 @@ export default function Index({ postId, isComment = false }: PostProps): any {
                             placeholder='Post something...'
                             name='body'
                             className='
+                            dark:bg-dark-body 
+                            dark:text-white
                     w-full h-12
                     px-4 pl-5
                     outline-none
+                    
                   '
                             onChange={(e) => {
                                 setBody(e.target.value);

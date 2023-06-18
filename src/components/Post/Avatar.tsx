@@ -33,6 +33,7 @@ export default function Avatar({ seed, large = false }: AvatarProps) {
             rounded-full
             border-gray-300
             bg-white
+            dark:bg-dark-body 
             ${large && 'h-20 w-20'} 
         `}
         >

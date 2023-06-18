@@ -17,6 +17,7 @@ export default function index() {
             justify-center
             items-center
             bg-gray-100
+            
             '
             >
                 <div

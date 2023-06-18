@@ -38,6 +38,7 @@ export default function LoginModal() {
         items-center
         justify-center
         gap-4
+        
         '
         >
             <Input
