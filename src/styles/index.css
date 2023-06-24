@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    background-color: black;
+    color: #fff;
+}
+
+/* @font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/dictionary/assets/fonts/inconsolata/static/Inconsolata-Regular.ttf')
+        format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/font/inter/static/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/font/lora/static/Lora-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Monospace';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/font/monospace/static/Monospace-Regular.ttf')
+        format('truetype');
+} */
+
+.sans {
+    font-family: 'Inconsolata', sans-serif;
+}
+
+.serif {
+    font-family: 'Lora', serif;
+}
+
+.monospace {
+    font-family: 'Monospace', monospace;
+}
