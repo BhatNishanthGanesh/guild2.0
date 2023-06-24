@@ -1,13 +1,12 @@
 interface Props {
     children: React.ReactNode;
 }
-// import Sidebar from '@/components/Sidebar';
+import Sidebar from '../components/Sidebar/index';
 export default function sidebarLayout({ children }: Props) {
     return (
         <>
-            {/* <Sidebar /> */}
+            <Sidebar />
             <div className='h-full '>{children}</div>
         </>
-        // {/* </Sidebar> */}
     );
 }

@@ -1,32 +1,46 @@
-'use client';
-import useCurrentUser from '@/hooks/useCurrentUser';
-import Avatar from '../Post/Avatar';
 import React from 'react';
-interface Props {
-    children?: React.ReactNode;
-}
+import useCurrentUser from '@/hooks/useCurrentUser';
+import Link from 'next/link';
+import { CogIcon } from '@heroicons/react/outline';
+
 export default function Index() {
     const { data: currentUser } = useCurrentUser();
-    return (
-        <div className='h-full'>
-            <main
-                className='
-            lg:pl-20 h-full
-            
-          '
-            >
-                <ul>
-                    <li>hello</li>
-                </ul>
 
-                <div
-                    className='
-                
-              '
-                >
-                    <Avatar seed={currentUser?.id} />
+    // Define an array of links
+    const links = [
+        { href: '/Settings/setting', label: 'Home Page' },
+        { href: '/Settings/pages/Appearance', label: 'Appearance' },
+        { href: '/Settings/pages/FirstPage', label: 'First Page' },
+        { href: '/Settings/pages/SecondPage', label: 'Second Page' },
+    ];
+
+    return (
+        <div className='flex h-full'>
+            {/* Sidebar */}
+            <div className='w-72 bg-gray-200'>
+                {/* Sidebar content */}
+                <div className='m-6 flex items-center'>
+                    <CogIcon
+                        className='w-6 h-6 cursor-pointer'
+                        strokeWidth={1.5}
+                    />
+                    <h2 className='text-xl p-3'>Settings</h2>
+                    <div className='absolute inset-y-0 border-l-2 md:border-l-4 border-black left-40 dark:border-white' />
                 </div>
-            </main>
+                <div className='flex flex-col justify-end'>
+                    {links.map((link, index) => (
+                        <React.Fragment key={index}>
+                            <div className='border-t-2 md:border-t-4 border-black dark:border-white' />
+                            <Link href={link.href} passHref>
+                                <div className='m-6 text-xl cursor-pointer'>
+                                    {link.label}
+                                </div>
+                            </Link>
+                        </React.Fragment>
+                    ))}
+                    <div className='border-t-2 md:border-t-4 border-black dark:border-white' />
+                </div>
+            </div>
         </div>
     );
 }
