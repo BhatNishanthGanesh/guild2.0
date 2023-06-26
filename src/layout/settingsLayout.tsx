@@ -5,8 +5,10 @@ import Sidebar from '../components/Sidebar/index';
 export default function sidebarLayout({ children }: Props) {
     return (
         <>
-            <Sidebar />
-            <div className='h-full '>{children}</div>
+            <div className='flex'>
+                <Sidebar />
+                <div className='h-full '>{children}</div>
+            </div>
         </>
     );
 }

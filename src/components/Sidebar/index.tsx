@@ -8,16 +8,16 @@ export default function Index() {
 
     // Define an array of links
     const links = [
-        { href: '/Settings/setting', label: 'Home Page' },
-        { href: '/Settings/pages/Appearance', label: 'Appearance' },
-        { href: '/Settings/pages/FirstPage', label: 'First Page' },
-        { href: '/Settings/pages/SecondPage', label: 'Second Page' },
+        { href: '/settings/setting', label: 'Home Page' },
+        { href: '/settings/appearance', label: 'Appearance' },
+        { href: '/settings/FirstPage', label: 'First Page' },
+        { href: '/settings/SecondPage', label: 'Second Page' },
     ];
 
     return (
         <div className='flex h-full'>
             {/* Sidebar */}
-            <div className='w-72 bg-gray-200'>
+            <div className='w-72 bg-gray-200 dark:bg-black'>
                 {/* Sidebar content */}
                 <div className='m-6 flex items-center'>
                     <CogIcon

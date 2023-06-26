@@ -17,7 +17,7 @@ const Layout = ({ children, pathname }: LayoutProps) => {
                 <ChatLayout>{children}</ChatLayout>
             </>
         );
-    } else if (pathname === '/settings') {
+    } else if (pathname === '/settings/appearance') {
         return (
             <>
                 <SettingsLayout>{children}</SettingsLayout>

@@ -1,7 +1,7 @@
-import SettingsPage from '../components/Settings/pages/setting';
+// import SettingsPage from '../components/Settings/pages/setting';
 
-const Settings = () => {
-    return <SettingsPage />;
-};
+// const Settings = () => {
+//     return <SettingsPage />;
+// };
 
-export default Settings;
+// export default Settings;
